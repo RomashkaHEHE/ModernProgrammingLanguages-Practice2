@@ -19,7 +19,7 @@ public class Task5 {
                 System.out.println("Расчёт гипотенузы прямоугольного треугольника по двум катетам.");
             } else if (command.equals("3")) {
                 System.out.println("Кузнеченко Роман Евгеньевич, РИ-250911.");
-            } else if (command.equals("0") || command.equalsIgnoreCase("выход")) {
+            } else if (command.equals("0") || command.equalsIgnoreCase("exit")) {
                 break;
             } else {
                 System.out.println("Неизвестная команда. Повторите ввод.");
@@ -31,7 +31,7 @@ public class Task5 {
         System.out.println("1. Выполнить расчёт");
         System.out.println("2. Информация о программе");
         System.out.println("3. Информация о разработчике");
-        System.out.println("0. Выход");
+        System.out.println("0. exit");
         System.out.print("Выберите пункт: ");
     }
 
@@ -53,12 +53,12 @@ public class Task5 {
 
     static double readLeg(Scanner scanner, String name) {
         while (true) {
-            System.out.print("Введите катет " + name + " или 'выход': ");
+            System.out.print("Введите катет " + name + " или 'exit': ");
             if (!scanner.hasNextLine()) {
                 return -1;
             }
             String input = scanner.nextLine().trim();
-            if (input.equalsIgnoreCase("выход")) {
+            if (input.equalsIgnoreCase("exit")) {
                 return -1;
             }
 
